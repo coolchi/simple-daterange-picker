@@ -28,6 +28,18 @@ class DateHelper
 
     const THIS_YEAR = 'THIS_YEAR';
 
+    const LAST_YEAR = 'LAST_YEAR';
+
+    const LAST_2_YEARS = 'LAST_2_YEARS';
+
+    const LAST_3_YEARS = 'LAST_3_YEARS';
+
+    const LAST_5_YEARS = 'LAST_5_YEARS';
+
+    const LAST_10_YEARS = 'LAST_10_YEARS';
+
+    const ALL_TIME = 'ALL_TIME';
+
     public static function getParsedDatesGroupedRanges($value): array
     {
         $start = Carbon::now()->setTime(0, 0, 0);
@@ -69,6 +81,24 @@ class DateHelper
             case 'THIS_YEAR':
                 $start->startOfYear();
                 break;
+            case 'LAST_YEAR':
+                $start->startOfYear()->subYear();
+                $end = $start->clone()->endOfYear();
+                break;
+            case 'LAST_2_YEARS':
+                $start->subYears(2);
+                break;
+            case 'LAST_3_YEARS':
+                $start->subYears(3);
+                break;
+            case 'LAST_5_YEARS':
+                $start->subYears(5);
+                break;  
+            case 'LAST_10_YEARS':
+                $start->subYears(10);
+                break;
+            case 'ALL_TIME':
+                break;
             default:
                 //Ex. 2020-06-15 to 2023-06-15
                 $parsed = explode(' to ', $value);
@@ -79,7 +109,6 @@ class DateHelper
                     $start = Carbon::createFromFormat('Y-m-d', $parsed[0])->setTime(0, 0, 0);
                     $end = Carbon::createFromFormat('Y-m-d', $parsed[1])->setTime(23, 59, 59);
                 }
-
         }
 
         return [
