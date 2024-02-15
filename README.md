@@ -5,14 +5,14 @@ A filter for Nova 4 that displays a Date Range Picker instead of a single date p
 ### Install
 
 Run this command in your nova project:
-`composer require rpj/daterangepicker`
+`composer require coolchi/daterangepicker`
 
 ### How to use
 
 In your Nova resource, just add DateRangeFilter class in the filters function, and include the column that you would like to use as the one to filter the resource.
 
 ```php
- use Rpj\Daterangepicker\Daterangepicker;
+ use Coolchi\Daterangepicker\Daterangepicker;
 
  public function filters(Request $request)
     {
@@ -25,8 +25,8 @@ In your Nova resource, just add DateRangeFilter class in the filters function, a
 Additionally, you can pass a string with default date range to use in the component. If no value is passed, TODAY value is set as default.
 
 ```php
- use Rpj\Daterangepicker\Daterangepicker;
- use Rpj\Daterangepicker\DateHelper;
+ use Coolchi\Daterangepicker\Daterangepicker;
+ use Coolchi\Daterangepicker\DateHelper;
 
  public function filters(Request $request)
     {

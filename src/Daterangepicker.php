@@ -1,10 +1,10 @@
 <?php
 
-namespace Rpj\Daterangepicker;
+namespace Coolchi\Daterangepicker;
 
 use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Rpj\Daterangepicker\DateHelper as Helper;
+use Coolchi\Daterangepicker\DateHelper as Helper;
 
 class Daterangepicker extends Filter
 {

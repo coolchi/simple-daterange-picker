@@ -1,5 +1,5 @@
 {
-    "name": "rpj/daterangepicker",
+    "name": "coolchi/daterangepicker",
     "description": "A simple Date Range filter for Laravel Nova 4.",
     "keywords": [
         "laravel",
@@ -20,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Rpj\\Daterangepicker\\": "src/"
+            "Coolchi\\Daterangepicker\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Rpj\\Daterangepicker\\FilterServiceProvider"
+                "Coolchi\\Daterangepicker\\FilterServiceProvider"
             ]
         }
     },

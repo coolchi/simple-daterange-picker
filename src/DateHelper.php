@@ -1,6 +1,6 @@
 <?php
 
-namespace Rpj\Daterangepicker;
+namespace Coolchi\Daterangepicker;
 
 use Illuminate\Support\Carbon;
 
